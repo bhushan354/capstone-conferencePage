@@ -8,11 +8,14 @@
     /* sadhyapurta */
     display: none;
 }
+.logo{
+    display: none;
+}
 
-.hamburgerOpen
 
 .navbar2 {
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 .navbar2 a{
@@ -22,3 +25,70 @@
 li {
     list-style-type: none;
   }
+
+  /* homepage section 1 */
+.homePageSection {
+    background-image: url('images/mobileBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px;
+    justify-content: center;
+}
+
+.homePage{
+    gap:12px;
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    
+    height: 500px;
+    width: 100%;
+    padding: 3px;
+}
+
+.lineOne {
+    font-size: 22px;
+    font-weight: 480;
+    color: #ec5242;
+    font-family: 'Lato',sans-serif;
+
+}
+
+.lineTwo {
+    display: block;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: url('images/linetwobg.png');
+    font-family: 'Lato',sans-serif;
+    justify-content: center;
+    background-size: cover;
+    font-size: 38px;
+    font-weight: 1800;
+
+}
+
+.linePara {
+    padding: 24px 0;
+   
+    background: #f4f4f8;
+    margin-top: 36px;
+    font-family: 'Lato',sans-serif;
+    border: 2px solid white;
+    color: #1f232b;
+}
+
+.lineData {
+    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Lato',sans-serif;
+    line-height: normal;
+    color: #272a31;
+}
+
+.lineVenue {
+    font-family: 'Lato',sans-serif;
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: 200;
+}
