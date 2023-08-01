@@ -163,3 +163,65 @@ li {
   font-family: 'lato', sans-serif;
   color: #f4f4f8;
 }
+
+/* speakers section */
+
+.speakersContainer{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  height: 860px;
+  justify-content: center;
+  align-items: center;
+}
+
+.speakersList{
+  display:grid;
+  width: 100%;
+  height: 600px;
+  grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  row-gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.speaker1{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 4px;
+  width: 82%;
+  height: 100%;
+  justify-content: space-around;
+  background-color: #f4f4f8;
+}
+
+.speakerImg img{
+  width: 100%;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.infoSpeaker{
+   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.infoSpeaker h2{
+  color: #272a31;
+  font-size: 16px;
+
+}
+.infoSpeaker h3{
+  color:#e01507;
+  font-size: 10px;
+}
+.greyLine{
+  border: 1x solid #1f232b;
+  width: 15%;
+}
+.infoSpeaker p{
+  color: #272a31;
+  font-size: 10px;
+}
