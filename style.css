@@ -670,7 +670,7 @@ li {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    width: 90%;
+    width: 60%;
     align-items: center;
     justify-content: center;
     margin-top: 4px;
@@ -721,6 +721,11 @@ li {
     row-gap: 12px;
     margin-top: 8px;
     margin-bottom: 8px;
+  }
+
+  .img111 {
+    width: 6%;
+    margin-left: 50vw;
   }
 
   .programPara {
