@@ -17,25 +17,9 @@
   display: none;
 }
 
-.navbar2 {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  transition: opacity 0.3s ease;
-  background-color: #4d515c;
-}
-.navbar2 > a:first-child {
-  display: none;
-}
 .navbar2 a {
   height: 40px;
 }
-.hamburgerClose{
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
 
 .navbar2 li a {
   display: flex;
@@ -49,7 +33,25 @@
   align-items: center;
 }
 
-.linkGrid{
+.navbar2 {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  transition: opacity 0.3s ease;
+  background-color: #4d515c;
+}
+
+.navbar2 > a:first-child {
+  display: none;
+}
+
+.hamburgerClose {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.linkGrid {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,8 +141,8 @@ li {
   flex-direction: column;
   background-color: #272a31;
   width: 100%;
-  height: 978px;
-  justify-content: center;
+  height: 100%;
+  justify-content: initial;
   align-items: center;
   margin-top: 0;
 }
@@ -150,7 +152,7 @@ li {
   width: 60%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 6px;
+  margin-top: 30px;
 }
 
 .redLine {
@@ -213,7 +215,8 @@ li {
   flex-direction: column;
   background-color: #fff;
   width: 100%;
-  height: 860px;
+  height: 100%;
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -221,8 +224,8 @@ li {
 .speakersList {
   display: grid;
   width: 100%;
-  height: 600px;
-  grid-template-rows: repeat(6, 1fr);
+  height: 100%;
+  grid-template-rows: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
   row-gap: 5px;
@@ -258,22 +261,52 @@ li {
   display: flex;
   flex-direction: column;
 }
+
 .infoSpeaker h2 {
   color: #272a31;
   font-size: 18px;
   margin: 0;
 }
+
 .infoSpeaker h3 {
   color: #e01507;
   font-size: 10px;
   margin: 0;
 }
+
 .greyLine {
-  border: 1x solid #1f232b;
-  width: 15%;
+  border: 1px solid #464040;
+  width: 30%;
 }
+
 .infoSpeaker p {
-  color: #272a31;
+  color: #585b61;
   font-size: 10px;
   height: 50px;
+}
+
+.seeBtn {
+  display: flex;
+}
+
+.seeMore {
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  text-decoration: none;
+  color: #e01507;
+  border: 4px solid pink;
+  line-height: 44px;
+  align-items: center;
+}
+
+.seeLess {
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  text-decoration: none;
+  color: #e01507;
+  border: 4px solid pink;
+  line-height: 44px;
+  align-items: center;
 }
