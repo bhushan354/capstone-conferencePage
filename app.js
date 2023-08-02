@@ -1,37 +1,37 @@
 const speakers = [
   {
-    img: 'images/speaker1.png',
-    name: 'Virat Kohli',
+    img: 'images/smriti.jpg',
+    name: ' S Mandana',
     about: 'cricket player , Batsman',
     para: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos aspernatur corrupti ',
   },
   {
-    img: 'images/speaker1.png',
-    name: 'Virat Kohli',
+    img: 'images/abd.jpg',
+    name: 'AB Devilliars',
     about: 'cricket player , Batsman',
     para: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos aspernatur corrupti ',
   },
   {
-    img: 'images/speaker1.png',
+    img: 'images/vk.jpg',
     name: 'Virat Kohli',
+    about: 'cricket player , All-Rounder',
+    para: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos aspernatur corrupti ',
+  },
+  {
+    img: 'images/willi.jpg',
+    name: 'K Williamson',
     about: 'cricket player , Batsman',
     para: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos aspernatur corrupti ',
   },
   {
-    img: 'images/speaker1.png',
-    name: 'Virat Kohli',
-    about: 'cricket player , Batsman',
+    img: 'images/perry.jpg',
+    name: 'E perry',
+    about: 'cricket player , All-Rounder',
     para: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos aspernatur corrupti ',
   },
   {
     img: 'images/speaker1.png',
-    name: 'Virat Kohli',
-    about: 'cricket player , Batsman',
-    para: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos aspernatur corrupti ',
-  },
-  {
-    img: 'images/speaker1.png',
-    name: 'Virat Kohli',
+    name: 'D Broadman',
     about: 'cricket player , Batsman',
     para: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos aspernatur corrupti ',
   },
@@ -47,12 +47,14 @@ const speaker1 = document.createElement('div');
 // button
 const seebtn = document.createElement('div');
 seebtn.setAttribute('class', 'seeBtn');
-seebtn.innerHTML = ` <button class="seeMore">see more</button>
-<button class="seeLess" style="display: none;">see less</button>`;
+seebtn.innerHTML = ` <button class="seeMore">More ▽</button>
+<button class="seeLess" style="display: none;">Less △</button>`;
 speakersContainer.appendChild(seebtn);
 
 function generateSpeakersContainer1() {
-  for (let i = 0; i < 2; i += 1) {
+  const speakerCount = window.matchMedia('(min-width: 768px)').matches ? speakers.length : 2;
+
+  for (let i = 0; i < speakerCount; i += 1) {
     const speakerDiv = document.createElement('div');
     speakerDiv.setAttribute('class', 'speaker1');
 
@@ -122,6 +124,7 @@ seeLessButton.addEventListener('click', () => {
   seeLessButton.style.display = 'none';
 });
 
+// hamburger button
 const openButton = document.querySelector('.hamburgerOpen');
 
 function hamburgerOpen() {
@@ -138,18 +141,90 @@ openButton.addEventListener('click', () => {
   hamburgerOpen();
 });
 
+const aboutLink = document.getElementById('aboutLink');
+const homeLink = document.getElementById('homeLink');
+
 const closeButton = document.querySelector('.hamburgerClose');
+
 function hamburgerClose() {
   const section = document.querySelectorAll('section');
 
   const navbar2 = document.querySelector('.navbar2');
   navbar2.style.display = 'none';
 
-  section.forEach((section) => {
-    section.style.display = '';
-  });
+  for (let i = 0; i < section.length - 2; i += 1) {
+    section[i].style.display = '';
+  }
+  homeLink.style.display = 'none';
+  aboutLink.style.display = 'flex';
 }
 
 closeButton.addEventListener('click', () => {
   hamburgerClose();
 });
+
+// open for about page
+const openButton1 = document.querySelector('.hamburgerOpen1');
+
+function hamburgerOpen1() {
+  const section = document.querySelectorAll('section');
+  const navbar2 = document.querySelector('.navbar2');
+
+  navbar2.style.display = 'flex';
+  for (let i = 0; i < section.length - 1; i += 1) {
+    section[i].style.display = 'none';
+  }
+  aboutLink.style.display = 'none';
+  homeLink.style.display = '';
+}
+
+openButton1.addEventListener('click', () => {
+  hamburgerOpen1();
+});
+
+// about page fucntion
+
+function hamburgerClose11() {
+  const section = document.querySelectorAll('section');
+
+  const navbar2 = document.querySelector('.navbar2');
+  navbar2.style.display = 'none';
+
+  for (let i = 0; i < section.length - 1; i += 1) {
+    section[i].style.display = 'none';
+  }
+  homeLink.style.display = 'none';
+  aboutLink.style.display = 'flex';
+}
+
+//  home function
+
+function home() {
+  const section = document.querySelectorAll('section');
+
+  const navbar2 = document.querySelector('.navbar2');
+  navbar2.style.display = 'none';
+
+  for (let i = 0; i < section.length - 2; i += 1) {
+    section[i].style.display = '';
+  }
+  homeLink.style.display = 'none';
+  aboutLink.style.display = 'flex';
+}
+
+homeLink.addEventListener('click', home);
+
+// open about
+function openAbout() {
+  const aboutPageContainer = document.querySelector('.aboutPageContainer');
+
+  hamburgerClose11();
+
+  if (aboutPageContainer.style.display === 'none') {
+    aboutPageContainer.style.display = '';
+  } else {
+    aboutPageContainer.style.display = '';
+  }
+}
+const aboutLink1 = document.getElementById('aboutLink');
+aboutLink1.addEventListener('click', openAbout);

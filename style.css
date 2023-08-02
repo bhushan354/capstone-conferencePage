@@ -1,5 +1,4 @@
 * {
-  border: 1px solid green;
   margin: 0;
   padding: 0;
 }
@@ -9,7 +8,6 @@
 }
 
 .navbar1 {
-  /* sadhyapurta */
   display: none;
 }
 
@@ -43,12 +41,13 @@
 }
 
 .navbar2 > a:first-child {
-  display: none;
+  display: flex;
 }
 
 .hamburgerClose {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 22px;
 }
 
 .linkGrid {
@@ -56,7 +55,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 10px;
+  margin-top: 20px;
+  row-gap: 28px;
 }
 
 .campaignButton {
@@ -117,7 +117,7 @@ li {
   background: #f4f4f8;
   margin-top: 28px;
   font-family: "Lato", sans-serif;
-  border: 2px solid white;
+  border: 1px solid gray;
   color: #1f232b;
 }
 
@@ -147,6 +147,10 @@ li {
   margin-top: 0;
 }
 
+.programIcon {
+  margin-left: 8px;
+}
+
 .mainProgram h2 {
   color: #fff;
   width: 60%;
@@ -171,14 +175,16 @@ li {
   margin-top: 4px;
 }
 
-.programs {
-  display: grid;
-  grid-template-columns: 22% 28% 50%;
-  background-color: #4d515c;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  width: 92%;
+@media (max-width: 768px) {
+  .programs {
+    display: grid;
+    grid-template-columns: 22% 28% 50%;
+    background-color: #4d515c;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 92%;
+  }
 }
 
 .programHeading {
@@ -190,11 +196,13 @@ li {
   color: #fff;
   font-family: "lato", sans-serif;
   font-size: 12px;
+  width: 94%;
 }
 
 .mobileJoin {
   width: 50%;
   height: 70px;
+  margin-bottom: 16px;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -229,6 +237,7 @@ li {
   justify-items: center;
   align-items: center;
   row-gap: 5px;
+  margin-top: 8px;
 }
 
 .speaker1 {
@@ -287,26 +296,459 @@ li {
 
 .seeBtn {
   display: flex;
+  width: 50%;
 }
 
 .seeMore {
   display: flex;
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #dbd9d9;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
   font-weight: 700;
+  font-size: 14px;
   justify-content: center;
-  text-decoration: none;
-  color: #e01507;
-  border: 4px solid pink;
-  line-height: 44px;
   align-items: center;
+  color: #000;
+  margin-bottom: 12px;
 }
 
 .seeLess {
   display: flex;
+  width: 100%;
+  padding: 6px;
+  color: #000;
+  border-radius: 4px;
+  border: 1px solid #dbd9d9;
+  box-shadow: 2px 2px 4px 0 rgba(3, 2, 2, 0.25);
   font-weight: 700;
+  font-size: 14px;
   justify-content: center;
-  text-decoration: none;
-  color: #e01507;
-  border: 4px solid pink;
-  line-height: 44px;
   align-items: center;
+  margin-bottom: 12px;
+}
+
+/* about oage */
+.page1 {
+  background-image: url("images/mobileBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 12px;
+  justify-content: center;
+}
+
+.homePage1 {
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+}
+
+.lineOne1 {
+  font-size: 22px;
+  font-weight: 480;
+  justify-content: center;
+  color: #ec5242;
+  font-family: "Lato", sans-serif;
+}
+
+.lineTwo1 {
+  display: block;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: url("images/linetwobg.png");
+  font-family: "cocogoose", sans-serif;
+  justify-content: center;
+  background-size: cover;
+  font-size: 32px;
+  font-weight: 1000;
+}
+
+.linePara1 {
+  padding: 0;
+  background-color: #fff;
+  margin-top: 28px;
+  width: 100%;
+  border: 1px solid gray;
+  font-family: "Lato", sans-serif;
+  color: #1f232b;
+}
+
+.lineData1 {
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: underline;
+  font-family: "Lato", sans-serif;
+  line-height: normal;
+  color: #000;
+}
+
+.lineVenue1 {
+  font-family: "Lato", sans-serif;
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+/* page2 */
+.page2 {
+  background-color: #f4f4f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+}
+
+.logoHead1 {
+  margin-top: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  width: 80%;
+}
+
+.redLine1 {
+  border: 1px solid red;
+  width: 35px;
+  margin-top: 4px;
+  justify-content: center;
+}
+
+.logoInfo1 {
+  font-size: 12px;
+  line-height: 12px;
+  color: #5d626b;
+  margin-top: 4px;
+  font-family: "lato", sans-serif;
+}
+
+.logoImg1 {
+  width: 60%;
+  margin-top: 10px;
+}
+
+/* page3 */
+.page3 {
+  background-color: #f4f4f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+}
+
+.logoHead2 {
+  margin-top: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  width: 80%;
+}
+
+.redLine2 {
+  border: 1px solid red;
+  width: 35px;
+  margin-top: 4px;
+  justify-content: center;
+}
+
+.logoInfo2 {
+  font-size: 14px;
+  line-height: 12px;
+  color: #1f232b;
+  margin-top: 4px;
+}
+
+.imgGrid1 {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.img1 {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.img2 {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* page 4 */
+.page4 {
+  background-color: #424247;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.partner1 {
+  color: #f4f4f8;
+  font-size: 26px;
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
+  margin-top: 18px;
+}
+
+.gridPartner1 {
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.gridPartner1 img {
+  width: 100%;
+}
+
+.smallEnd {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.img111 {
+  width: 20%;
+}
+
+.text1 {
+  width: 40%;
+  margin-left: 40px;
+}
+
+.text1 h3 {
+  justify-content: center;
+  text-align: left;
+  width: 90%;
+  height: 70%;
+  font-size: 16px;
+  color: #464040;
+  font-family: "lato", sans-serif;
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .desktopJoin {
+    display: flex;
+    margin-top: 12px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .logo {
+    display: flex;
+    margin-left: -100px;
+  }
+
+  .navbar1 {
+    display: flex;
+    column-gap: 12px;
+    padding: 8px;
+    padding-right: 214px;
+    flex-direction: row-reverse;
+    background-color: #272a31;
+  }
+
+  .navbar1 a {
+    color: #fff;
+  }
+
+  .navbar2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    background-color: #fff;
+  }
+
+  .navbar2 a {
+    display: flex;
+    margin-left: 48px;
+  }
+
+  .navbar2 li a {
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    font-size: 12px;
+    font-family: "lato", sans-serif;
+    text-decoration: none;
+    height: 10px;
+    color: hsla(0, 0%, 13%, 1);
+    line-height: 44px;
+    align-items: center;
+  }
+
+  .navbar2 > a:first-child {
+    display: none;
+  }
+
+  .hamburgerClose {
+    display: none;
+  }
+
+  .linkGrid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    row-gap: 28px;
+  }
+
+  .humburger {
+    display: none;
+  }
+
+  .homePage {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 18%;
+    height: 100%;
+    width: 50%;
+    padding: 3px;
+  }
+
+  .lineOne {
+    font-size: 24px;
+    font-weight: 480;
+    color: #ec5242;
+    font-family: "Lato", sans-serif;
+  }
+
+  .navbar2 li {
+    margin-left: 10px;
+  }
+
+  i .lineTwo {
+    display: block;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: url("images/linetwobg.png");
+    font-family: "cocogoose", sans-serif;
+    justify-content: center;
+    background-size: cover;
+    font-size: 56px;
+    font-weight: 1000;
+  }
+
+  .campaignButton {
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 16px;
+    color: #e01507;
+    border: 4px solid pink;
+    line-height: 44px;
+    align-items: center;
+  }
+
+  .programContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  .programIcon {
+    margin-left: 54px;
+    margin-top: 42px;
+  }
+
+  .mobileJoin {
+    display: none;
+  }
+
+  .programs {
+    display: grid;
+    grid-template-rows: 22% 28% 50%;
+    background-color: #4d515c;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 90%;
+  }
+
+  .programHeading {
+    color: #ec5242;
+    text-align: center;
+    font-size: 25px;
+    font-family: "lato", sans-serif;
+  }
+
+  .seeLess {
+    display: none;
+  }
+
+  .seeMore {
+    display: none;
+  }
+
+  .speakersList {
+    display: grid;
+    width: 79%;
+    height: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .programPara {
+    color: #fff;
+    font-family: "lato", sans-serif;
+    font-size: 11px;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+  }
+
+  .imgGrid1 {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .page1 {
+    background-image: url(images/mobileBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px;
+    padding-left: 20%;
+    padding-right: 20%;
+    justify-content: center;
+  }
 }
