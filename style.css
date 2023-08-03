@@ -277,7 +277,7 @@ li {
 .infoSpeaker {
   width: 100%;
   display: flex;
-  gap: 4px;
+  gap: 12px;
   flex-direction: column;
 }
 
