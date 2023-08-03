@@ -60,7 +60,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Live-Demo will be added soon. 
+https://bhushan354.github.io/ 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -161,6 +161,10 @@ Do follow this account if you liked this project
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse and my peers for providing enough knowledge for this project
+
+## Design Credits 
+Cindy Shin
+https://www.behance.net/gallery/29845175/CC-Global-Summit-2015
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
