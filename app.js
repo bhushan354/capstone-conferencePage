@@ -167,14 +167,12 @@ closeButton.addEventListener('click', () => {
 const openButton1 = document.querySelector('.hamburgerOpen1');
 
 function hamburgerOpen1() {
-  const section = document.querySelectorAll('section');
   const navbar2 = document.querySelector('.navbar2');
-  const homeLink = document.getElementById('homeLink')
+  const homeLink = document.getElementById('homeLink');
 
-  navbar2.style.display = 'flex';
-  
-  aboutLink.style.display = 'none';
-  homeLink.style.display = 'flex';
+navbar2.style.display = 'flex';
+aboutLink.style.display = 'none';
+homeLink.style.display = 'flex';
 }
 
 openButton1.addEventListener('click', () => {
@@ -205,7 +203,7 @@ function home() {
   navbar2.style.display = '';
 
   for (let i = 0; i <= 3 ; i += 1) {
-    section[i].style.display = '';
+  section[i].style.display = '';
   }
   aboutPageContainer.style.display = 'none';
   homeLink.style.display = 'none';
@@ -217,17 +215,14 @@ homeLink.addEventListener('click', home);
 // open about
 function openAbout() {
   const aboutPageContainer = document.querySelector('.aboutPageContainer');
-  const section = document.querySelectorAll('section');
   hamburgerClose11();
   const homeLink = document.getElementById('homeLink');
   const aboutLink = document.getElementById('aboutLink');
 
-  
+homeLink.style.display = 'flex'; 
+aboutLink.style.display = 'none'; 
 
-  homeLink.style.display = 'flex'; 
-  aboutLink.style.display = 'none'; 
-
-  aboutPageContainer.style.display = 'flex';
+aboutPageContainer.style.display = 'flex';
 }
 
 const aboutLink1 = document.getElementById('aboutLink');
@@ -245,8 +240,8 @@ function refreshPageOnMediaQueryChange(mediaQuery) {
     isMobileView = event.matches;
   };
 
-  mediaQueryList.addEventListener("change", handleMediaQueryChange);
+  mediaQueryList.addEventListener('change', handleMediaQueryChange);
 }
 
-const mediaQuery = "(min-width: 768px)";
+const mediaQuery = '(min-width: 768px)';
 refreshPageOnMediaQueryChange(mediaQuery);
