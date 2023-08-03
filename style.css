@@ -746,12 +746,13 @@ li {
     font-weight: 700;
     justify-content: center;
     text-decoration: none;
-    margin-left: 22px;
+    margin-left: 48px;
+    padding: 2px;
     width: 120px;
     height: 54px;
-    font-size: 16px;
-    color: #e01507;
-    border: 4px solid red;
+    font-size: 13px;
+    color: #ec5242;
+    border: 4px solid #ec5242;
     line-height: 28px;
     align-items: center;
   }
