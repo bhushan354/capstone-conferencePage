@@ -170,9 +170,9 @@ function hamburgerOpen1() {
   const navbar2 = document.querySelector('.navbar2');
   const homeLink = document.getElementById('homeLink');
 
-navbar2.style.display = 'flex';
-aboutLink.style.display = 'none';
-homeLink.style.display = 'flex';
+  navbar2.style.display = 'flex';
+  aboutLink.style.display = 'none';
+  homeLink.style.display = 'flex';
 }
 
 openButton1.addEventListener('click', () => {
@@ -202,8 +202,8 @@ function home() {
   const navbar2 = document.querySelector('.navbar2');
   navbar2.style.display = '';
 
-  for (let i = 0; i <= 3 ; i += 1) {
-  section[i].style.display = '';
+  for (let i = 0; i <= 3; i += 1) {
+    section[i].style.display = '';
   }
   aboutPageContainer.style.display = 'none';
   homeLink.style.display = 'none';
@@ -219,10 +219,10 @@ function openAbout() {
   const homeLink = document.getElementById('homeLink');
   const aboutLink = document.getElementById('aboutLink');
 
-homeLink.style.display = 'flex'; 
-aboutLink.style.display = 'none'; 
+  homeLink.style.display = 'flex';
+  aboutLink.style.display = 'none';
 
-aboutPageContainer.style.display = 'flex';
+  aboutPageContainer.style.display = 'flex';
 }
 
 const aboutLink1 = document.getElementById('aboutLink');
