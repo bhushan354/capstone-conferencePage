@@ -633,7 +633,7 @@ li {
   .navbar1 {
     height: 30px;
     display: flex;
-    column-gap: 12px;
+    column-gap: 15px;
     padding: 0;
     flex-direction: row-reverse;
     background-color: #272a31;
@@ -650,8 +650,9 @@ li {
 
   .navbar1 a {
     color: #fff;
-    text-decoration: none;
     font-size: 12px;
+    text-decoration: none;
+    font-family: 'lato',sans-serif;
   }
 
   .navbar2 {
