@@ -2,7 +2,7 @@ const speakers = [
   {
     img: 'images/smriti.jpg',
     name: ' S Mandana',
-    about: 'cricket player , Batsman',
+    about: 'cricket player , All-Rounder',
     para: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos aspernatur corrupti ',
   },
   {
@@ -163,19 +163,18 @@ closeButton.addEventListener('click', () => {
   hamburgerClose();
 });
 
-// open for about page
+// open for about page desktop
 const openButton1 = document.querySelector('.hamburgerOpen1');
 
 function hamburgerOpen1() {
   const section = document.querySelectorAll('section');
   const navbar2 = document.querySelector('.navbar2');
+  const homeLink = document.getElementById('homeLink')
 
   navbar2.style.display = 'flex';
-  for (let i = 0; i < section.length - 1; i += 1) {
-    section[i].style.display = 'none';
-  }
+  
   aboutLink.style.display = 'none';
-  homeLink.style.display = '';
+  homeLink.style.display = 'flex';
 }
 
 openButton1.addEventListener('click', () => {
@@ -188,26 +187,27 @@ function hamburgerClose11() {
   const section = document.querySelectorAll('section');
 
   const navbar2 = document.querySelector('.navbar2');
-  navbar2.style.display = 'none';
+  navbar2.style.display = '';
 
   for (let i = 0; i < section.length - 1; i += 1) {
     section[i].style.display = 'none';
   }
-  homeLink.style.display = 'none';
-  aboutLink.style.display = 'flex';
+  homeLink.style.display = 'flex';
+  aboutLink.style.display = 'none';
 }
 
 //  home function
 
 function home() {
   const section = document.querySelectorAll('section');
-
+  const aboutPageContainer = document.querySelector('.aboutPageContainer');
   const navbar2 = document.querySelector('.navbar2');
-  navbar2.style.display = 'none';
+  navbar2.style.display = '';
 
-  for (let i = 0; i < section.length - 2; i += 1) {
+  for (let i = 0; i <= 3 ; i += 1) {
     section[i].style.display = '';
   }
+  aboutPageContainer.style.display = 'none';
   homeLink.style.display = 'none';
   aboutLink.style.display = 'flex';
 }
@@ -217,14 +217,36 @@ homeLink.addEventListener('click', home);
 // open about
 function openAbout() {
   const aboutPageContainer = document.querySelector('.aboutPageContainer');
-
+  const section = document.querySelectorAll('section');
   hamburgerClose11();
+  const homeLink = document.getElementById('homeLink');
+  const aboutLink = document.getElementById('aboutLink');
 
-  if (aboutPageContainer.style.display === 'none') {
-    aboutPageContainer.style.display = '';
-  } else {
-    aboutPageContainer.style.display = '';
-  }
+  
+
+  homeLink.style.display = 'flex'; 
+  aboutLink.style.display = 'none'; 
+
+  aboutPageContainer.style.display = 'flex';
 }
+
 const aboutLink1 = document.getElementById('aboutLink');
 aboutLink1.addEventListener('click', openAbout);
+
+// reloading function for no errrors while changing screens
+function refreshPageOnMediaQueryChange(mediaQuery) {
+  const mediaQueryList = window.matchMedia(mediaQuery);
+  let isMobileView = mediaQueryList.matches;
+
+  const handleMediaQueryChange = (event) => {
+    if (event.matches !== isMobileView) {
+      window.location.reload();
+    }
+    isMobileView = event.matches;
+  };
+
+  mediaQueryList.addEventListener("change", handleMediaQueryChange);
+}
+
+const mediaQuery = "(min-width: 768px)";
+refreshPageOnMediaQueryChange(mediaQuery);
