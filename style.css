@@ -1,4 +1,5 @@
 * {
+  border: 1px solid green;
   margin: 0;
   padding: 0;
 }
@@ -905,7 +906,7 @@ li {
     justify-content: center;
     height: 100%;
     width: 100%;
-    gap: 22px;
+    gap: 8%;
   }
 
   .img111 {
@@ -983,7 +984,11 @@ li {
     justify-content: center;
     height: 100%;
     width: 100%;
-    gap: 22px;
+    gap: 8%;
     background-color: #1f232b;
+  }
+
+  .text22{
+    width: 60%;
   }
 }
