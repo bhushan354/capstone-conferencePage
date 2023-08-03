@@ -47,8 +47,8 @@ const speaker1 = document.createElement('div');
 // button
 const seebtn = document.createElement('div');
 seebtn.setAttribute('class', 'seeBtn');
-seebtn.innerHTML = ` <button class="seeMore">More ▽</button>
-<button class="seeLess" style="display: none;">Less △</button>`;
+seebtn.innerHTML = ` <button class="seeMore">MORE 🔻</button>
+<button class="seeLess" style="display: none;">LESS 🔺</button>`;
 speakersContainer.appendChild(seebtn);
 
 function generateSpeakersContainer1() {
