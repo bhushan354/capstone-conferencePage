@@ -245,7 +245,7 @@ li {
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  row-gap: 5px;
+  row-gap: 14px;
   margin-top: 8px;
 }
 
