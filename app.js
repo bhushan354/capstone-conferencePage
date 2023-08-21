@@ -152,7 +152,7 @@ function hamburgerClose() {
   const navbar2 = document.querySelector('.navbar2');
   navbar2.style.display = 'none';
 
-  for (let i = 0; i < section.length - 2; i += 1) {
+  for (let i = 0; i < section.length - 1; i += 1) {
     section[i].style.display = '';
   }
   homeLink.style.display = 'none';
